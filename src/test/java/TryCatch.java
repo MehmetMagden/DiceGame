@@ -18,7 +18,7 @@ public class TryCatch {
                 scan.nextLine();
                 break;
 
-                // if the data is not a letter, the game will ask again to enter a number
+                // if the data is a letter, the game will ask again to enter a number
             } catch (Exception e) {
                 System.out.print("Please enter a number: ");
                 tryCatch();
