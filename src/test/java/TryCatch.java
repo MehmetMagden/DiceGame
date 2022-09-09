@@ -17,7 +17,7 @@ public class TryCatch {
                 break;
 
             } catch (Exception e) {
-                System.out.println("please enter a number");
+                System.out.println("Please enter a number");
                 tryCatch();
                 break;
             }
