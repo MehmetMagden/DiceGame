@@ -9,8 +9,7 @@ public class NumberOfRounds {
 
         int numberOfRounds=0;
 
-        // Creating scan object to receive number of rounds from the user
-        Scanner scan = new Scanner(System.in);
+
 
         do {
 
@@ -18,9 +17,7 @@ public class NumberOfRounds {
             System.out.print("Enter Number of Rounds: ");
 
             // Receiving the number of the rounds from the user
-
-                numberOfRounds = scan.nextInt();
-                scan.nextLine();
+            numberOfRounds= TryCatch.tryCatch();
 
         }
         while (numberOfRounds<1||numberOfRounds>99);
