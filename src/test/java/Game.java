@@ -5,15 +5,8 @@ public class Game {
 
     public static void main(String[] args) {
 
-        // Creating scan object to receive number of rounds from the user
-        Scanner scan = new Scanner(System.in);
 
-
-        // giving message to inform the user
-        System.out.print("Enter Number of Rounds: ");
-
-        // Receiving the number of the rounds from the user
-        int numberOfRounds = scan.nextInt();
+        int numberOfRounds = NumberOfRounds.numberOfRoundsMethod();
 
 
         int playerOneTotalPoint = 0;
@@ -36,16 +29,17 @@ public class Game {
             int playerThreeGainedPoint = 0;
 
 
-            // if all three players get the same number, then the number is added to total point of each player.
-            // I did not add this part because I could not see the difference. It is not effecting the result.
-
+                // if all three players get the same number, then the number is added to total point of each player.
+            if (playerOneDice==playerTwoDice&&playerTwoDice==playerThreeDice){
+                playerOneGainedPoint = playerOneDice;
+                playerTwoGainedPoint = playerTwoDice;
+                playerThreeGainedPoint = playerThreeDice;
 
                 // if player one and player two dice numbers are equal, they will get double points of their dices
-            if (playerOneDice == playerTwoDice) {
+            } else if (playerOneDice == playerTwoDice) {
                 playerOneGainedPoint = playerOneDice * 2;
                 playerTwoGainedPoint = playerTwoDice * 2;
                 playerThreeGainedPoint = playerThreeDice;
-
 
                 // if player two and player three dice numbers are equal, they will get double points of their dices
             } else if (playerTwoDice == playerThreeDice) {
